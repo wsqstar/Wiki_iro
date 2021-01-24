@@ -1,4 +1,4 @@
-# 关于
+# 介绍
 
 [![image](https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/readme/readme.png)](https://github.com/mirai-mamori/Sakurairo)
 

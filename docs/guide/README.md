@@ -1,15 +1,10 @@
 # 安装
 
-## ①下载 Sakurairo 主题
+::: tip 主题交流群
+欢迎加入主题交流群讨论：[784229925](https://jq.qq.com/?_wv=1027&k=U5UJjRik)
+:::
 
-你可以从以下平台下载到 Sakurairo 主题
-
-- GitHub : [https://github.com/mirai-mamori/Sakurairo](https://github.com/mirai-mamori/Sakurairo)
-- Gitee : [https://gitee.com/mirai-mamori/Sakurairo](https://gitee.com/mirai-mamori/Sakurairo)
-
-## ③安装 Sakurairo 主题
-
-### 方式一
+## 方式一
 ![仪表盘](https://cdn.jsdelivr.net/gh/Ukenn2112/irobeta/img/20210121192914.png)
 
 进入仪表盘，点击左侧菜单的外观选项
@@ -30,7 +25,7 @@
 
 选择文件-现在安装
 
-### 方式二
+## 方式二
 
 直接将你下载好的压缩包上传放在网站根目录 `/wp-content/themes/`下解压
 

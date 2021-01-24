@@ -1,4 +1,8 @@
-# 主题配置
+# 配置
+
+::: warning 注意
+如果您使用了静态缓存类插件，请在保存设置后清理插件缓存。
+:::
 
 ## 初步设置
 
@@ -531,12 +535,27 @@
 
 - 外部随机图：填写随机图地址。
   - 如使用本地图片这将图片放置`.\wp-content\themes\Sakurairo\manifest\gallary`
+  - 如使用外部API您可以选择一下几种
+    - [iroAPI](https://api.iro.tw/webp_pc.php)
+    - [eee.dog](https://www.eee.dog/tech/rand-pic-api.html)
+    - [动漫星空](https://api.dongmanxingkong.com/suijitupian.html)
+    - [小歪](https://api.ixiaowai.cn/)
+    - [搏天api](https://api.btstu.cn/doc/sjbz.php)
+    - [墨天逸](https://api.mtyqx.cn/)
 
-- Webp优化随机图：选择后在下方填写 Manifest 路径，更多信息请参考[Wiki](https://github.com/mashirozx/Sakura/wiki/options),，如果你在上面选择了Webp优化随机图，请点击下方蓝色区域的`更新 Manifest`，来使用Webp随机图。
+- Webp优化随机图：选择后在下方填写 Manifest 路径，更多信息请参考[webp优化随机图说明](/guide/webp)，如果你在上面选择了Webp优化随机图，请点击下方蓝色区域的`更新 Manifest`，来使用Webp随机图。
 
 - 封面随机图片多终端分离：开启后桌面端和移动端会分别使用不同的随机图API地址
 
 - 外部API手机端随机图片地址：填写随机图地址。
+  - 如使用本地图片这将图片放置`.\wp-content\themes\Sakurairo\manifest\gallary`
+  - 如使用外部API您可以选择一下几种
+    - [iroAPI](https://api.iro.tw/webp_mb.php)
+    - [eee.dog](https://www.eee.dog/tech/rand-pic-api.html)
+    - [动漫星空](https://api.dongmanxingkong.com/suijitupian.html)
+    - [小歪](https://api.ixiaowai.cn/)
+    - [搏天api](https://api.btstu.cn/doc/sjbz.php)
+    - [墨天逸](https://api.mtyqx.cn/)
 
 #### 封面随机图片滤镜
 
@@ -1136,7 +1155,7 @@
 
 #### 本地化JS/CSS文件
 
-如遇jsDelivr CDN挂了，或者想自己更高程度的自定义请本地化前端库开启，在`iro主题设置`中的`其他设置-低使用设置-本地化前端库`中设置
+如想更快速的加载页面您可以关闭该选项，但是你在本地更改的JS/CSS文件将不会生效（除[设置页内的CSS设置](/guide/about.html#%E8%87%AA%E5%AE%9A%E4%B9%89css%E6%A0%B7%E5%BC%8F)），在`iro主题设置`中的`其他设置-低使用设置-本地化JS/CSS文件`中设置
 
 >默认开启，部分JS文件和CSS文件不走jsDelivr CDN
 
@@ -1177,11 +1196,35 @@
 
 >用于更新前端Cookie和浏览器缓存，可使用任意字符串
 
-#### BaguetteBox灯箱效果
+## Fancybox图片灯箱效果
+
+`!{alt}(url)[th_url] 或者 !{alt}(url)`
+
+- alt：图片标题；
+- url：原图链接；
+- th_url：缩略图链接。在指定了缩略图链接的时候，页面上优先显示缩略图，点击查看原图。
+
+例：
+
+```
+!{image 1}(https://view.moezx.cc/images/2019/01/19/TVKDX147_006.png)[https://view.moezx.cc/images/2019/01/19/TVKDX147_006.th.png]
+
+!{image 2}(https://view.moezx.cc/images/2018/01/15/PID50489279by.jpg)
+```
+**注意：** 这不是标准的 Markdown 语法，如果为了文章将来的兼容性，你很介意这一点，那么可以改用 `fancybox` 定义的标准 html 标签：
+
+```
+<a data-fancybox="gallery" href="big_1.jpg"><img src="small_1.jpg"></a>
+<a data-fancybox="gallery" href="big_2.jpg"><img src="small_2.jpg"></a>
+```
+
+## BaguetteBox图片灯箱效果
 
 设置BaguetteBox灯箱效果是否开启，在`iro主题设置`中的`其他设置-低使用设置-版本控制`中设置
 
 >开启之后将替换Fancybox作为图片灯箱效果，不建议使用
+
+>BaguetteBox灯箱使用方法`[![图片标题](../example.th.png)](../example.png)`
 
 ## 备份恢复
 
@@ -1191,7 +1234,7 @@
 - 恢复：
 - 用`记事本/文本编辑器`打开备份的`.json`文件，全选复制，粘贴在导入按钮上方的文本框内，点击`导入`即可恢复备份设置
 
-### 系统级集成升级功能
+## 主题更新功能
 
 ![](https://cdn.jsdelivr.net/gh/Ukenn2112/irobeta/img/20210121194022.png)
 

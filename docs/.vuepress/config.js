@@ -36,16 +36,20 @@ module.exports = {
         editLinkText: "帮助改善此页面",
         nav: [
           { text: '主页', link: '/' },
+          { text: '介绍', link: '/about' },
           { text: '开始使用', link: '/guide/' },
-          { text: '关于', link: '/about' },
+          { text: "使用博客", link: "/demo.html" },
+          { text: '更新日志', link: '/releases' },
+          { text: '赞助我们', link: '/sponsors' },
           { text: '演示站点', link: 'https://demo.iro.tw/'},
         ],
         sidebar: {
           "/": [
-            "about.html",
             "guide/",
             "guide/about",
             "guide/feedback",
+            "/releases",
+            "/sponsors",
           ],
         },
       },
